@@ -24,8 +24,28 @@ function getName(firstName: string, lastName: string):string{
 
 // console.log(getName('John'));
 
-function myVoid():void{
-    return;
+
+
+// ##################### ARROW FUNCTION #####################
+
+let log = function(message) {
+    console.log(message);
+}
+// Arrow function (Lambda expression in C#)
+
+let doLog = (message) => {
+    console.log(message);
 }
 
-console.log(myVoid('John'));
+let OneLineFunction = (message) => console.log(message);    // One Line Function Without Parameters
+
+let WithoutParameters = () => console.log();    // If we dont have parameters - One Line Function Without Parameters
+
+//Function with point object with annotation
+let drawPoint = (point) => {
+    //...
+}
+
+drawPoint({
+
+})

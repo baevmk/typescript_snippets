@@ -37,3 +37,40 @@ let myNull: null = null;
 let myUndefined: undefined = null;
 
 console.log(myString);
+
+
+// ##################### ENUMS #####################
+
+// Enums allow us to define a set of named constants. Using enums can make it easier to document intent, or create a set of distinct cases.
+// TypeScript provides both numeric and string-based enums
+enum DirectionNum {
+  Up = 1,
+  Down,
+  Left,
+  Right
+}
+console.log(DirectionNum.Left);
+
+enum DirectionString {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT"
+}
+
+let direction1 = DirectionString.Right;
+let direction2: string = DirectionString.Up;
+let directionArray: string[] = [DirectionString.Up, DirectionString.Right];
+console.log(DirectionString.Left);
+
+// ##################### #####################
+
+
+
+// ##################### TYPE ASSOCIATE #####################
+
+let message;    //Type ANY, if we didn't declare type
+message = 'abc';
+//let AbliviousWay = message.endsWith('c'); // Wrong way, not string type
+let endsWithC = (<string>message).endsWith('c');
+let alternativeWay = (message as string).endsWith('c');
